@@ -1,0 +1,191 @@
+body {
+            background-color: #000;
+            color: #101010ee;
+            font-family: sans-serif;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            color: #00950e;
+            font-size: 20px;
+            font-family: fantasy;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            box-shadow: 0 4px 2px lightgrey;
+            text-shadow: 0 2px 1px lightgrey;
+            border-radius: 5px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Editor container */
+        .editor{
+            width: 340px;
+            margin: 0 auto;
+            margin-right: 8px;
+            text-align: center;
+        }
+        
+        .editor label:hover {
+  color: green;
+}
+
+.editor label:hover i.fa.fa-upload {
+  color: green;
+}
+
+
+        .tools {
+            margin-top: 10px;
+            width: 100%;
+        }
+        a[id=download-icon]{
+          margin-left: 250px;
+          color: lightgrey;
+        }
+        a[id=download-icon]:hover {
+        color: green;
+        }
+
+        .scroll-container {
+            width: 100%;
+            height: 100px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .scroll-button {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 3px solid darkgreen;
+            background-color: #00950e;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .scroll-button:hover {
+            background-color: darkgreen;
+        }
+
+        img {
+            border: 1px solid grey;
+            background-color: #131313f2;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type="range"] {
+            width: 90px;
+            accent-color: green;
+            display: inline-block;
+            vertical-align: top;
+            margin: 12px 0;
+        }
+
+        label {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 5px;
+            color: lightgrey;
+        }
+        .range{
+          font-size: 12px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        /* Responsive adjustments */@media (max-width: 768px) {
+    .scroll-button {
+        width: 70px; /* Adjust for this screen size */
+        height: 70px;
+        line-height: 70px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-button {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .scroll-button {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 8px;
+    }
+}
+        
+        
+        /* Filters */
+        .filter-1 { filter: grayscale(100%); }
+        .filter-2 { filter: sepia(100%); }
+        .filter-3 { filter: invert(100%); }
+        .filter-4 { filter: blur(5px); }
+        .filter-5 { filter: brightness(200%); }
+        .filter-6 { filter: contrast(200%); }
+        .filter-7 { filter: saturate(200%); }
+        .filter-8 { filter: hue-rotate(90deg); }
+        .filter-9 { filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); }
+        .filter-10 { background-blend-mode: multiply; }
+        .filter-11 { image-rendering: pixelated; }
+        .filter-12 { filter: contrast(150%) brightness(150%); }
+.filter-13 { filter: saturate(150%) hue-rotate(45deg); }
+.filter-14 { filter: sharpen(10px); }
+.filter-15 { background-blend-mode: screen; }
+.filter-16 { filter: hue-rotate(180deg) contrast(150%); }
+.filter-17 { filter: brightness(150%) saturate(120%); }
+.filter-18 { background-blend-mode: overlay; }
+.filter-19 { filter: grayscale(100%); }
+.filter-20 { filter: blur(3px) saturate(150%); }
+.filter-21 { filter: sharpen(5px) hue-rotate(90deg); }
+.filter-22 { background-blend-mode: darken; }
+.filter-23 { filter: hue-rotate(45deg) contrast(120%); }
+.filter-24 { filter: brightness(120%) saturate(180%); }
+.filter-25 { background-blend-mode: lighten; }
+.filter-26 { filter: sharpen(8px) hue-rotate(135deg); }
+.filter-27 { filter: saturate(180%) contrast(150%); }
+.filter-28 { background-blend-mode: color-dodge; }
+.filter-29 { filter: hue-rotate(135deg) brightness(180%); }
+.filter-30 { filter: contrast(180%) saturate(200%); }
+.filter-31 { filter: blur(2px) contrast(100%); }
+.filter-32 { background-blend-mode: hard-light; }
+.filter-33 { filter: sharpen(3px) saturate(100%); }
+.filter-34 { filter: hue-rotate(90deg) brightness(150%); }
+.filter-35 { background-blend-mode: soft-light; }
+.filter-36 { filter: contrast(120%) saturate(120%); }
+.filter-37 { filter: blur(4px) hue-rotate(45deg); }
+.filter-38 { background-blend-mode: difference; }
+.filter-39 { filter: sharpen(6px) contrast(100%); }
+.filter-40 { filter: saturate(200%) brightness(200%); }
+.filter-41 { filter: blur(2px) contrast(100%) brightness(80%); } /* Soft Focus /
+.filter-42 { background-blend-mode: hard-light; filter: contrast(150%) saturate(150%); } / Dramatic /
+.filter-43 { filter: sharpen(3px) saturate(100%) hue-rotate(20deg); } / Warm Tone /
+.filter-44 { filter: hue-rotate(90deg) brightness(150%) contrast(80%); } / Cool Tone /
+.filter-45 { background-blend-mode: soft-light; filter: saturate(120%) contrast(100%); } / Pastel /
+.filter-46 { filter: contrast(120%) saturate(120%) blur(1px); } / Grainy /
+.filter-47 { filter: blur(4px) hue-rotate(45deg) brightness(80%); } / Dreamy /
+.filter-48 { background-blend-mode: difference; filter: sharpen(200%); } / High Contrast /
+.filter-49 { filter: sharpen(6px) contrast(100%) brightness(120%); } / Sharp /
+.filter-50 { filter: saturate(200%) brightness(200%) hue-rotate(30deg) contrast(80%); } / Vintage */
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photofy - Photo Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="photofy.css">
+</head>
+<body>
+    <header>
+        <h3>Photofy</h3>
+    </header>
+
+    <div class="editor">
+        <label for="fileInput">
+            <i class="fa fa-upload"></i>
+        </label>
+        <span>
+            <a id="download-icon" href="#" download="edited-image.jpg">
+                <i class="fa fa-download"></i>
+            </a>
+        </span>
+        </div>
+        <img id="previewImg" src="upload.jpg" width="340" height="495" alt="Preview Image">
+        <canvas id="canvas" style="display:none;"></canvas>
+        <input type="file" id="fileInput" style="display:none;">
+
+        <div class="tools">
+            <div class="scroll-container">
+                
+<button class="scroll-button" data-filter="filter-1">Grayscale</button>
+<button class="scroll-button" data-filter="filter-2">Sepia</button>
+<button class="scroll-button" data-filter="filter-3">Invert</button>
+<button class="scroll-button" data-filter="filter-4">Blur</button>
+<button class="scroll-button" data-filter="filter-5">Brightness</button>
+<button class="scroll-button" data-filter="filter-6">Contrast</button>
+<button class="scroll-button" data-filter="filter-7">Saturate</button>
+<button class="scroll-button" data-filter="filter-8">Hue</button>
+<button class="scroll-button" data-filter="filter-9">Shadow</button>
+<button class="scroll-button" data-filter="filter-10">Blend</button>
+<button class="scroll-button" data-filter="filter-11">Pixelate</button>
+<button class="scroll-button" data-filter="filter-12">Contrast 2</button>
+<button class="scroll-button" data-filter="filter-13">Saturate 2</button>
+<button class="scroll-button" data-filter="filter-14">Sharpen</button>
+<button class="scroll-button" data-filter="filter-15">Screen Bd</button>
+<button class="scroll-button" data-filter="filter-16">Hue 2</button>
+<button class="scroll-button" data-filter="filter-17">Bright Sat</button>
+<button class="scroll-button" data-filter="filter-18">Overlay Bd</button>
+<button class="scroll-button" data-filter="filter-19">Grayscal2</button>
+<button class="scroll-button" data-filter="filter-20">Blur Sat</button>
+<button class="scroll-button" data-filter="filter-21">Sharp Hue</button>
+<button class="scroll-button" data-filter="filter-22">Dark Bd</button>
+<button class="scroll-button" data-filter="filter-23">Huetrast</button>
+<button class="scroll-button" data-filter="filter-24">BriSat 2</button>
+<button class="scroll-button" data-filter="filter-25">Light Bd</button>
+<button class="scroll-button" data-filter="filter-26">Sharp Hue</button>
+<button class="scroll-button" data-filter="filter-27">SatCon</button>
+<button class="scroll-button" data-filter="filter-28">Dodge Bd</button>
+<button class="scroll-button" data-filter="filter-29">Hue Boost</button>
+<button class="scroll-button" data-filter="filter-30">ConserSat</button>
+<button class="scroll-button" data-filter="filter-31">Blurtrast</button>
+<button class="scroll-button" data-filter="filter-32">Hard Bd</button>
+<button class="scroll-button" data-filter="filter-33">Sharp Sat</button>
+<button class="scroll-button" data-filter="filter-34">Hue Boost 2</button>
+<button class="scroll-button" data-filter="filter-35">Soft Bd</button>
+<button class="scroll-button" data-filter="filter-36">High Con</button>
+<button class="scroll-button" data-filter="filter-37">Blur Hue</button>
+<button class="scroll-button" data-filter="filter-38">Diffblend</button>
+<button class="scroll-button" data-filter="filter-39">Sharp Con</button>
+<button class="scroll-button" data-filter="filter-40">Sat Boost</button>
+<button class="scroll-button" data-filter="filter-41">Blur Con</button>
+<button class="scroll-button" data-filter="filter-42">Soft Focus</button>
+<button class="scroll-button" data-filter="filter-43">Dramatic</button>
+<button class="scroll-button" data-filter="filter-44">Warm Tone</button>
+<button class="scroll-button" data-filter="filter-45">Cool Tone</button>
+<button class="scroll-button" data-filter="filter-46">Pastel</button>
+<button class="scroll-button" data-filter="filter-47">Grainy</button>
+<button class="scroll-button" data-filter="filter-48">Dreamy</button>
+<button class="scroll-button" data-filter="filter-49">Sharp</button>
+<button class="scroll-button" data-filter="filter-50">Vintage</button>
+
+                <button class="scroll-button" id="reset">Reset</button>
+            </div>
+            
+        </div>
+    </div>
+<script src="photofy.js"></script>
+    
+</body>
+</html>
