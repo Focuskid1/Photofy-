@@ -1,0 +1,213 @@
+ body {
+    background-color: ghostwhite;
+    background-image: url("photofy.jpg");
+    background-size: 100% 100vh;
+    background-repeat: repeat;
+    color: ghostwhite;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-size: cover;
+    width: 100%;
+    position: fixed;
+    background-image: url("photofy.jpg");
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    text-shadow: 2px 0px 2px grey;
+    font-size: 30px;
+    font-family: "Helvetica", sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar i {
+    font-size: 30px;
+    cursor: pointer;
+    color: lightgrey;
+    margin-left: 140px;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("photofy.jpg");
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    box-shadow: none; /* Remove the shadow */
+    z-index: 1000; /* Make sure it covers everything */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+}
+
+.dropdown-content a:hover {
+    background-color: green;
+    border-radius: 5px;
+}
+/* Style for the close (cancel) icon */
+.navbar i {
+    font-size: 30px;
+    cursor: pointer;
+    color: lightgrey;
+    position: relative;
+    z-index: 1001; /* Ensure it's above everything else */
+}
+
+/* When the menu is open, the icon becomes a close icon and moves to the top-right corner */
+.navbar i.fa-times {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white; /* Change icon color to match the dropdown */
+    z-index: 1001; /* Ensure it's above the dropdown */
+}
+a {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+
+.home {
+    text-align: center;
+    font-size: 25px;
+    font-family: fantasy;
+    margin-top: 150px;
+}
+
+.img {
+    text-align: center;
+}
+img[id=logo2]{
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.photofy {
+    display: flex; /* Ensure both buttons are in the same row */
+    align-items: center; /* Vertically center the buttons */
+}
+
+.photofy1 {
+    width: 120px;
+    height: 38px;
+    margin-left: 40px;
+    background-color: darkgreen;
+    border: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Make sure content inside the button is centered */
+    color: white;
+    border-radius: 5px;
+}
+
+.seemore {
+    background-image: url("photofy.jpg");
+    width: 120px;
+    height: 38px;
+    margin-left: 40px; /* Reduce the margin to keep them aligned */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Make sure content inside the button is centered */
+}
+
+.seemore:hover, .photofy1:hover {
+    background-color: green;
+    opacity: 0.6;
+}
+@media (max-width: 480px) {
+    .navbar i {
+        font-size: 25px;
+    }
+@media (max-width: 1024px) {
+    .navbar i {
+        margin-left: 150px;
+    }
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 10px;
+    }
+
+
+#about {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.aboutPhotofy {
+    text-align: center;
+    color: lightgrey;
+}
+
+.u {
+    color: green;
+}
+footer {
+            margin-bottom: 10px;
+            background-color: #0b2c0d;
+            margin: 0;
+            left: 0;
+            color: white;
+            padding: 20px;
+        }
+
+        .footertext {
+            margin-left: 30px;
+        }
+
+        .footertext h1 {
+            font-size: 24px;
+        }
+
+        .footertext p {
+            font-size: 16px;
+        }
+
+        .social {
+            font-size: 20px;
+            color: white;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+        }
+
+        .social a:hover {
+            color: #ffcc00; /* Add hover effect */
+        }
+
+        #logo2 {
+            vertical-align: middle;
+        }
