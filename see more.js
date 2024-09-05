@@ -1,0 +1,56 @@
+
+          document.addEventListener('scroll', function() {
+  const video = document.getElementById('autoplayVideo');
+  const videoPosition = video.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight;
+
+  // Check if the video is within the viewport
+  if (videoPosition < screenPosition) {
+    if (video.paused) {
+      video.play();
+      video.style.display = 'block'; // Make the video visible
+    }
+  } else {
+    video.pause();
+  }
+}); 
+        
+function toggleMenu() {
+    var menu = document.getElementById("navMenu");
+    var icon = document.querySelector('.navbar i');
+
+    // Toggle the display of the menu
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+        icon.classList.remove('fa-times'); // Change to bars icon
+        icon.classList.add('fa-bars');
+    } else {
+        menu.style.display = "block";
+        icon.classList.remove('fa-bars'); // Change to close icon
+        icon.classList.add('fa-times');
+    }
+}
+
+// Close the menu and change the icon when the user scrolls
+window.onscroll = function() {
+    var menu = document.getElementById("navMenu");
+    var icon = document.querySelector('.navbar i');
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+        icon.classList.remove('fa-times'); // Change back to bars icon
+        icon.classList.add('fa-bars');
+    }
+};
+
+// Optional: Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.fas')) {
+        var menu = document.getElementById("navMenu");
+        var icon = document.querySelector('.navbar i');
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+            icon.classList.remove('fa-times'); // Change back to bars icon
+            icon.classList.add('fa-bars');
+        }
+    }
+};
