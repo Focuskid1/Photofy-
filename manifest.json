@@ -1,0 +1,17 @@
+{
+    "name": "Photofy",
+    "short_name": "Photofy",
+    "theme_color": "darkgreen",
+    "background_color": "#fbf5bf",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://photofy-jscd.onrender.com/photofy.html",
+    "description": "Photofy photo editor",
+    "orientation": "any",
+        "icons": [
+  {
+    "src": "logo2.jpg",
+    "sizes": "1014x1014"
+  }
+    ]
+}
