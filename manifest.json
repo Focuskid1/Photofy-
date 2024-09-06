@@ -5,7 +5,7 @@
     "background_color": "#fbf5bf",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://photofy-jscd.onrender.com/",
+    "start_url": "https://photofy-jscd.onrender.com/photofy.html",
     "description": "Photofy photo editor",
     "orientation": "any",
         "icons": [
