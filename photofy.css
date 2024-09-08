@@ -23,34 +23,36 @@ body {
         }
 
         /* Editor container */
-        .editor{
-            width: 340px;
-            margin: 0 auto;
-            margin-right: 8px;
-            text-align: center;
-        }
-        
-        .editor label:hover {
-  color: green;
+       .editor label {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    color: lightgrey;
+}
+
+a[id=download-icon] {
+    display: inline-block;
+    margin-left: 10px;
+    color: lightgrey;
+    text-decoration: none;  /* Remove underline */
+}
+
+a[id=download-icon]:hover {
+    color: green;
+}
+
+.editor {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.editor label:hover {
+    color: green;
 }
 
 .editor label:hover i.fa.fa-upload {
-  color: green;
+    color: green;
 }
-
-
-        .tools {
-            margin-top: 10px;
-            width: 100%;
-        }
-        a[id=download-icon]{
-          margin-left: 250px;
-          color: lightgrey;
-        }
-        a[id=download-icon]:hover {
-        color: green;
-        }
-
         .scroll-container {
             width: 100%;
             height: 100px;
@@ -177,7 +179,7 @@ body {
 .filter-38 { background-blend-mode: difference; }
 .filter-39 { filter: sharpen(6px) contrast(100%); }
 .filter-40 { filter: saturate(200%) brightness(200%); }
-.filter-41 { filter: blur(2px) contrast(100%) brightness(80%); } /* Soft Focus /
+.filter-41 { filter: blur(2px) contrast(100%) brightness(80%); } /* Soft Focus */
 .filter-42 { background-blend-mode: hard-light; filter: contrast(150%) saturate(150%); } / Dramatic /
 .filter-43 { filter: sharpen(3px) saturate(100%) hue-rotate(20deg); } / Warm Tone /
 .filter-44 { filter: hue-rotate(90deg) brightness(150%) contrast(80%); } / Cool Tone /
@@ -186,6 +188,4 @@ body {
 .filter-47 { filter: blur(4px) hue-rotate(45deg) brightness(80%); } / Dreamy /
 .filter-48 { background-blend-mode: difference; filter: sharpen(200%); } / High Contrast /
 .filter-49 { filter: sharpen(6px) contrast(100%) brightness(120%); } / Sharp /
-.filter-50 { filter: saturate(200%) brightness(200%) hue-rotate(30deg) contrast(80%); } / Vintage */
-
-
+.filter-50 { filter: saturate(200%) brightness(200%) hue-rotate(30deg) contrast(80%); } /* Vintage */
