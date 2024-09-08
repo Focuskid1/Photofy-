@@ -7,26 +7,30 @@
     <title>Photofy - Photo Editor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="photofy.css">
-<link rel="manifest" href="manifest.json">
+   <link rel="manifest" href="manifest.json"> 
 </head>
 <body>
     <header>
         <h3>Photofy</h3>
     </header>
+    <br><br>
 
     <div class="editor">
         <label for="fileInput">
-            <i class="fa fa-upload"></i>
+        <i class="fa fa-upload"></i><br>Upload
+         
         </label>
         <span>
-            <a id="download-icon" href="#" download="edited-image.jpg">
+           <a id="download-icon" href="#" download="edited-image.jpg">
                 <i class="fa fa-download"></i>
+         <br>Download
             </a>
         </span>
         </div>
-        <img id="previewImg" src="upload.jpg" width="340" height="495" alt="Preview Image">
+        <img id="previewImg" src="upload.jpg" width="260" height="300" alt="Preview Image">
         <canvas id="canvas" style="display:none;"></canvas>
         <input type="file" id="fileInput" style="display:none;">
+        <br><br>
 
         <div class="tools">
             <div class="scroll-container">
@@ -87,60 +91,19 @@
             
         </div>
     </div>
-<script src="photofy.js"></script>
-  <script> 
-      self.addEventListener("install", function(event) {
-  event.waitUntil(preLoad());
-});
-
-var preLoad = function(){
-  console.log("Installing web app");
-  return caches.open("offline").then(function(cache) {
-    console.log("caching index and important routes");
-    return cache.addAll(["/blog/", "/blog", "/", "/contact", "/resume", "/offline.html"]);
-  });
-};
-
-self.addEventListener("fetch", function(event) {
-  event.respondWith(checkResponse(event.request).catch(function() {
-    return returnFromCache(event.request);
-  }));
-  event.waitUntil(addToCache(event.request));
-});
-
-var checkResponse = function(request){
-  return new Promise(function(fulfill, reject) {
-    fetch(request).then(function(response){
-      if(response.status !== 404) {
-        fulfill(response);
-      } else {
-        reject();
-      }
-    }, reject);
-  });
-};
-
-var addToCache = function(request){
-  return caches.open("offline").then(function (cache) {
-    return fetch(request).then(function (response) {
-      console.log(response.url + " was cached");
-      return cache.put(request, response);
-    });
-  });
-};
-
-var returnFromCache = function(request){
-  return caches.open("offline").then(function (cache) {
-    return cache.match(request).then(function (matching) {
-     if(!matching || matching.status == 404) {
-       return cache.match("offline.html");
-     } else {
-       return matching;
-     }
-    });
-  });
-};
-      
-  </script>  
+<script src="service-worker.js"></script>
+   <script src="main.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
