@@ -10,7 +10,7 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "https://photofy-jscd.onrender.com/logo2.jpg",
+            "src": "logo2.jpg",
             "sizes": "1024x1024",
             "type": "image/jpeg"
         }
