@@ -1,17 +1,18 @@
 {
-  "name": "Photofy",
-  "short_name": "Photofy",
-  "theme_color": "#006400",
-  "background_color": "#fbf5bf",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "https://photofy-jscd.onrender.com/photofy.html",
-  "description": "Photofy photo editor",
-  "orientation": "any",
-  "icons": [
-    {
-      "src": "logo2.jpg",
-      "sizes": "512x512"
-    }
-  ]
+    "name": "Photofy App",
+    "short_name": "Photofy",
+    "theme_color": "#ffcbe4",
+    "background_color": "#fa99ca",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://photofy-jscd.onrender.com/photofy.html",
+    "description": "Photo editor app with great features",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://photofy-jscd.onrender.com/logo2.jpg",
+            "sizes": "1024x1024",
+            "type": "image/jpeg"
+        }
+    ]
 }
