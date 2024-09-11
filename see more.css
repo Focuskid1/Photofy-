@@ -153,6 +153,10 @@ input{
 input[type=submit]{
     width: 50%;
 }
+input[type=submit]:hover{
+    background-color: lightgrey;
+    color: darkgreen;
+}   
 div[id=contact]{
     text-align: center;
 }
